@@ -1,0 +1,3 @@
+The CSS property `calc()` is used to perform calculations, but it can lead to unexpected results if not used correctly. For example, using `calc(100% - 10px)` within a flexbox container might not produce the expected result if the 10px is not relative to the container's dimensions.
+
+Another example is that units must match. For example, mixing percentages and pixels directly is invalid in `calc()` such as `width: calc(100% + 10px)` or `height: calc(50% - 1em)`
