@@ -1,0 +1,41 @@
+/* bug.css */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.item {
+  width: calc(100% - 10px); /* Incorrect: 10px is not relative to the container */
+  background-color: lightblue;
+  margin: 5px;
+}
+
+/* bugSolution.css */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.item {
+  width: calc(100% - 20px); /* corrected units */
+  background-color: lightgreen; /* corrected */
+  margin: 5px;
+}
+
+/* Example demonstrating unit consistency */
+.consistent {
+  width: calc(50% - 10px);
+  background-color: lightcoral;
+  margin: 5px;
+}
+
+/* Example with an intermediate variable */
+:root {
+  --sidebar-width: 200px;
+}
+
+.with-var {
+  width: calc(100vw - var(--sidebar-width));
+  background-color: lightpink;
+  margin: 5px;
+} 
